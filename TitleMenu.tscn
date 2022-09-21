@@ -1,0 +1,250 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://assests/fonts/Madrigal-mLJ92.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assests/fonts/TarrgetHalfToneRegular-gzRY.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://PlayButton.gd" type="Script" id=3]
+[ext_resource path="res://assests/fonts/Plaguard-ZVnjx.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://assests/coin/gold_1.png" type="Texture" id=5]
+[ext_resource path="res://assests/fonts/TarrgetAcademyRegular-ABEx.otf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.25098, 0, 0, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 60
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+font_data = ExtResource( 4 )
+
+[node name="TitleMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color( 0.121569, 0.0352941, 0.0352941, 1 )
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 224.0
+margin_top = 35.0
+margin_right = 800.0
+margin_bottom = 163.0
+custom_colors/font_color = Color( 1, 0.00784314, 0.00784314, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "JUMPER"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="PlayButton" type="Button" parent="."]
+modulate = Color( 1, 0.54902, 0, 1 )
+margin_left = 320.0
+margin_top = 192.0
+margin_right = 704.0
+margin_bottom = 320.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.494118, 0.996078, 0.478431, 1 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Play"
+flat = true
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 256.0
+margin_top = 356.0
+margin_right = 768.0
+margin_bottom = 548.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 12.0
+margin_top = 12.0
+margin_right = 268.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 4 )
+text = "Controls"
+autowrap = true
+
+[node name="Panel" type="Panel" parent="Panel"]
+margin_left = 124.0
+margin_top = 64.0
+margin_right = 239.0
+margin_bottom = 95.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="Label" type="Label" parent="Panel/Panel"]
+margin_right = 115.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SPACE"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="Panel/Panel"]
+margin_left = 145.0
+margin_right = 182.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "="
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label3" type="Label" parent="Panel/Panel"]
+margin_left = 196.0
+margin_right = 244.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Jump"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Panel2" type="Panel" parent="Panel"]
+margin_left = 124.0
+margin_top = 103.0
+margin_right = 239.0
+margin_bottom = 134.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="Label" type="Label" parent="Panel/Panel2"]
+margin_right = 115.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Left / Right Arrow"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="Panel/Panel2"]
+margin_left = 145.0
+margin_right = 182.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "="
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label3" type="Label" parent="Panel/Panel2"]
+margin_left = 196.0
+margin_right = 317.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Move Left / Right"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Panel3" type="Panel" parent="Panel"]
+margin_left = 124.0
+margin_top = 141.0
+margin_right = 239.0
+margin_bottom = 172.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="Label" type="Label" parent="Panel/Panel3"]
+margin_right = 115.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SHIFT"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="Panel/Panel3"]
+margin_left = 145.0
+margin_right = 182.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "="
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label3" type="Label" parent="Panel/Panel3"]
+margin_left = 196.0
+margin_right = 282.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Boost / Run"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 566.0
+margin_top = 366.0
+margin_right = 603.0
+margin_bottom = 403.0
+custom_fonts/font = SubResource( 6 )
+text = "3"
+align = 1
+valign = 1
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 526.0
+margin_top = 336.0
+margin_right = 563.0
+margin_bottom = 429.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "|"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 662.0
+margin_top = 366.0
+margin_right = 760.0
+margin_bottom = 403.0
+custom_fonts/font = SubResource( 8 )
+text = "to win"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Gold1" type="Sprite" parent="Label3"]
+position = Vector2( -34, 18 )
+scale = Vector2( 0.404762, 0.404762 )
+texture = ExtResource( 5 )
+
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_PlayButton_pressed"]
